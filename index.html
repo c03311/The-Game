@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script>
+        var height=document.documentElement.clientHeight;
+        $(document).ready(function(){
+            $(".screen,.save,.load,.textback").css("height",height);
+        });
+        
+    </script>
+</head>
+<body style="font-size: 16px">
+    <div class="save-confirm">
+        <p class="save-confirm-info">你确定要在此处保存存档么？</p>
+        <a href="javascript:void(0);" class="true">是</a>
+        <a href="javascript:void(0);" class="false">否</a>
+    </div>
+    <div class="load-confirm">
+        <p class="load-confirm-info">你确定读取这个存档么？</p>
+        <a href="javascript:void(0);" class="true">是</a>
+        <a href="javascript:void(0);" class="false">否</a>
+    </div>
+    <!-- 存档界面 -->
+    <div class="save">
+        <ul class="save-list">
+             <li>
+                <img src="img/nodata.png" width="128" height="72" class="save-img">
+                <div class="save-data">
+                    <h1 class="save-data-title">SAVE01</h1>
+                    <div class="save-data-text"></div>
+                    <p class="save-data-date"></p>
+                </div>
+            </li>
+            <li>
+                <img src="img/nodata.png" width="128" height="72" class="save-img">
+                <div class="save-data">
+                    <h1 class="save-data-title">SAVE02</h1>
+                    <div class="save-data-text"></div>
+                    <p class="save-data-date"></p>
+                </div>
+            </li>
+            <li>
+                <img src="img/nodata.png" width="128" height="72" class="save-img">
+                <div class="save-data">
+                    <h1 class="save-data-title">SAVE03</h1>
+                    <div class="save-data-text"></div>
+                    <p class="save-data-date"></p>
+                </div>
+            </li>
+            <li>
+                <img src="img/nodata.png" width="128" height="72" class="save-img">
+                <div class="save-data">
+                    <h1 class="save-data-title">SAVE04</h1>
+                    <div class="save-data-text"></div>
+                    <p class="save-data-date"></p>
+                </div>
+            </li>
+            <li>
+                <img src="img/nodata.png" width="128" height="72" class="save-img">
+                <div class="save-data">
+                    <h1 class="save-data-title">SAVE05</h1>
+                    <div class="save-data-text"></div>
+                    <p class="save-data-date"></p>
+                </div>
+            </li>
+            <li>
+                <img src="img/nodata.png" width="128" height="72" class="save-img">
+                <div class="save-data">
+                    <h1 class="save-data-title">SAVE06</h1>
+                    <div class="save-data-text"></div>
+                    <p class="save-data-date"></p>
+                </div>
+            </li>
+        </ul>
+        <a href="javascript:void(0);" class="backbtn">BACK</a> 
+    </div>
+    <!-- 读档界面 -->
+    <div class="load" style="display: none">
+        <ul class="load-list">
+            <li>
+                <img src="img/nodata.png" width="128" height="72" class="load-img">
+                <div class="load-data">
+                    <h1 class="load-data-title">SAVE01</h1>
+                    <div class="load-data-text"></div>
+                    <p class="load-data-date"></p>
+                </div>
+            </li>
+            <li>
+                <img src="img/nodata.png" width="128" height="72" class="load-img">
+                <div class="load-data">
+                    <h1 class="load-data-title">SAVE02</h1>
+                    <div class="load-data-text"></div>
+                    <p class="load-data-date"></p>
+                </div>
+            </li>            
+            <li>
+                <img src="img/nodata.png" width="128" height="72" class="load-img">
+                <div class="load-data">
+                    <h1 class="load-data-title">SAVE03</h1>
+                    <div class="load-data-text"></div>
+                    <p class="load-data-date"></p>
+                </div>
+            </li>
+            <li>
+                <img src="img/nodata.png" width="128" height="72" class="load-img">
+                <div class="load-data">
+                    <h1 class="load-data-title">SAVE04</h1>
+                    <div class="load-data-text"></div>
+                    <p class="load-data-date"></p>
+                </div>
+            </li>
+            <li>
+                <img src="img/nodata.png" width="128" height="72" class="load-img">
+                <div class="load-data">
+                    <h1 class="load-data-title">SAVE05</h1>
+                    <div class="load-data-text"></div>
+                    <p class="load-data-date"></p>
+                </div>
+            </li>
+            <li>
+                <img src="img/nodata.png" width="128" height="72" class="load-img">
+                <div class="load-data">
+                    <h1 class="load-data-title">SAVE06</h1>
+                    <div class="load-data-text"></div>
+                    <p class="load-data-date"></p>
+                </div>
+            </li>
+        </ul>
+        <a href="javascript:void(0);" class="backbtn">BACK</a> 
+    </div>
+    <!-- 剧情回放界面 -->
+    <div class="textback">
+        <ul class="textback-list">
+            <li>
+                <h2 class="textback-name">测试1名字</h2>
+                <p class="textback-text">测试1的文本测试1的文本测试1的文本测试1的文本</p>
+            </li>
+        </ul>
+        <a href="javascript:void(0);" class="backbtn">BACK</a>
+    </div>
+    <!-- 主界面 -->
+    <div class="screen">
+        <div class="chat-bar">
+            <h3 class="chat-bar-name">测试用姓名版</h3>
+            <p class="chat-bar-text">测试1的文本测试1的文本测试1的文本测试1的文本测试1的文本测试1的文本测试1的文本测试1的文本</p>
+        </div>
+        <img src="img/fanxing1.png" width="159" height="270" class="left-character">
+        <img src="img/blank.png" width="159" height="270" class="right-character">
+    </div>
+    <div class="btns">
+        <ul class="btns-list">
+            <li><a href="javascript:void(0);" class="savebtn">SAVE</a></li>
+            <li><a href="javascript:void(0);" class="loadbtn">LOAD</a></li>
+            <li><a href="javascript:void(0);" class="memorybtn">MEMORY</a></li>
+            <li><a href="javascript:void(0);" class="loadbtn">SYSTEM</a></li>
+        </ul>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/data.js"></script>
+    <script>
+        var storyprocess=0;/* 设置变量记录故事推进到了当前场景的哪一步 */
+
+
+        $(document).ready(function(){
+
+            /* 存档，读档，回放，系统的界面切换 */
+            $(".savebtn").click(function(){
+                saveswitch();
+            });
+            $(".loadbtn").click(function(){
+                loadswtich();
+            });
+            $(".memorybtn").click(function(){
+                $(".textback").fadeToggle(200);
+            });
+            $(".backbtn").click(function(){
+                $(this).parent("div").fadeToggle(200);
+                $(".save-confirm").fadeOut(200);
+                $(".load-confirm").fadeOut(200);
+            });
+            $(".textback").click(function(){
+                $(this).fadeOut(200);
+            });
+            /* 点击切换到下一句的函数 */
+
+            $(".screen").click(function(){
+                textplay();/* 点击切换到下一句的函数 */
+                storyback(); /* 渲染故事回放 */
+            })
+        });
+
+        /* 存档 */
+
+        $(".save-list li").click(function(){
+            $(".save-confirm").fadeIn(200);
+            var saveposition=$(this);
+            $(".save-confirm a").click(function(){
+            if($(this).hasClass("true")==true)
+            {
+                let saveindex=saveposition.index();
+                let currentname=$(".chat-bar-name").text();
+                let currenttext=$(".chat-bar-text").text();
+                let currentbgimg=$(".screen").css("background-image");
+                let imgstart=currentbgimg.indexOf("img");
+                let imgend=currentbgimg.indexOf("png");
+                currentbgimg=currentbgimg.slice(imgstart,imgend+3);
+                Cookies.set(`saveindex${saveindex}`,saveindex);
+                Cookies.set(`name${saveindex}`,currentname);
+                Cookies.set(`text${saveindex}`,currenttext);
+                Cookies.set(`bgimg${saveindex}`,currentbgimg);
+                Cookies.set(`save-storyprocess${saveindex}`,storyprocess);
+                saveposition.children("img").attr("src",currentbgimg)
+                saveposition.children(".save-data").children(".save-data-text").text(currenttext);
+                $(".save-confirm").fadeOut(200);
+                
+            }
+            else
+            {
+                $(".save-confirm").fadeOut(200);
+            }
+            });
+        });
+        /* 读档 */
+        $(".load-list li").click(function(){
+            var loadindex=$(this).index();
+            var loadposition=$(this);
+            if(Cookies.get(`saveindex${loadindex}`)==undefined)
+            {
+                
+            }
+            else
+            {
+                $(".load-confirm").fadeIn(200);
+                $(".load-confirm a").click(function(){
+                if($(this).hasClass("true")==true)
+                    {
+                        $(".screen").css("background-image",Cookies.get(`bgimg${loadindex}`));
+                        $(".chat-bar-name").text(Cookies.get(`name${loadindex}`));
+                        $(".chat-bar-text").text(Cookies.get(`text${loadindex}`));
+                        storyprocess=parseInt(Cookies.get(`save-storyprocess${loadindex}`));
+                        $(".load-confirm").fadeOut(200);
+                        $(".load").fadeOut(200);
+                    }
+                else
+                    {
+                        $(".load-confirm").fadeOut(200);
+                    }
+                
+                });
+            }
+        });
+        /* 回放 */
+    </script>
+</body>
+</html>
